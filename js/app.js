@@ -32,7 +32,7 @@
 			var that = this;
 			//var editView = new EditBookView({ model:that.model });
 			//editView.render();
-			that.model.trigger("test", that.model);
+			that.model.trigger("edit", that.model);
 			this.remove();
 		},
 		
@@ -103,7 +103,7 @@
 			
 			this.collection.on("add", this.renderBook, this);
 			this.collection.on("remove", this.removeBook, this);
-			this.collection.on("test", this.editBook, this);
+			this.collection.on("edit", this.editBook, this);
 			this.collection.on("change", this.renderBook, this);
 		},
 		
